@@ -1,0 +1,43 @@
+<html>
+	<title> sign up</title>
+	<head>
+	<link rel="stylesheet" type="text/css" href="signup.css">
+	<script src="wait.js"></script>
+	</head>
+	
+	<br><br><br><br><br>
+	<body background="pics\signupnew.jpg" size=100% style="filter:alpha(opacity=20); background-blend-mode: color-dodge; " >
+		<center>
+			
+			<form action="http://localhost/sanjeev/insert.php" method="post">
+				
+				<table width="2">
+					<tr>
+						<td><h1>username:</h1></td>
+						<td><input type="text"name="username"required id="username"minlength="5" maxlength="50"  placeholder="enter any username with atmost 25 characters"></td>
+					</tr>
+					<tr>
+						<td><h1>mobileno:</h1></td>
+						<td><input type="text"name="mobile"required pattern="[0-9]{10}" id="mobile"  placeholder="enter your 10  digit mobile number"></td>
+					</tr>
+					<tr>
+						<td><h1>email:</h1></td>
+						<td><input type="email"name="email" id="email"required placeholder="enter a valid email"></td>
+					</tr>
+					<tr>
+						<td><h1>password:</h1></td>
+						<td><input type="password"name="password"required id="password"minlength="6" maxlength="15" placeholder="enter a strong password"></td>
+					</tr>
+					<tr>
+						<td><h1>confirm password:</h1></td>
+						<td><input type="password"name="cpassword" required id="cpassword" minlength="6" maxlength="15" placeholder="please enter the same password"></td></tr>
+					<tr>
+						<td colspan="2" align="center"><input type="submit" value="submit"></td>
+					</tr>
+					
+					<caption><h1>please fill the details</h1></caption>
+				</table>
+			</form>
+		</center>
+	</body>
+</html>

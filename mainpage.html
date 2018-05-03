@@ -1,0 +1,176 @@
+<html>
+
+		<title> ONLINE restaurant</title>
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+		<script src="buttons.js"></script>
+		<!--head section-->
+		<head>
+				
+			<div>
+				<center>
+					<h1 size="10">
+						<span>O</span>
+						<span>N</span>
+						<span>L</span>
+						<span>I</span>
+						<span>N</span>
+						<span>E 	&nbsp;</span>
+						<span>R</span>
+						<span>E</span>
+						<span>S</span>
+						<span>T</span>
+						<span>A</span>
+						<span>U</span>
+						<span>R</span>
+						<span>A</span>
+						<span>N</span>
+						<span>T</span>
+						
+					</h1>
+				</center>
+			</div>
+			
+		</head>
+		
+		<!--   ................................................      -->
+		<body>
+			
+			<br>
+			<hr>
+			<div class="nav">
+				<!-- ....................................................................-->
+					<center>							
+						<button style="background-color:#00cccc;
+							color: white;
+							font-size:20;
+							padding: 14px;
+							border: none;
+							cursor: pointer;
+							width: 100px;
+							border-radius:100px;"
+							onclick="document.getElementById('loginform').style.display='block'">Login
+						</button>
+						<button style="background-color:#00cccc;
+							color: white;
+							font-size:20;
+							padding: 14px;
+							margin: 8px 0;
+							border: none;
+							cursor: pointer;
+							width: 100px;
+							border-radius:100px;"onclick="document.getElementById('signupform').style.display='block'">sign up
+						</button>
+					</center>
+			</div>
+			
+			
+			
+			<div id="loginform" class="box2">
+				<form class="box2area openbox" action="http://localhost/sanjeev/login.php" method="post">
+					<div class="dp">
+					  <span onclick="document.getElementById('loginform').style.display='none'" class="close" title="Close ">&times;
+					  </span>
+					  <img src="pics/food.jpg"  class="img">
+					</div>
+
+					<div class="details">
+					  <i><b>Username</b>
+					  <input type="text" placeholder="Enter Username" name="username" required>
+
+					  <b>Password</b>
+					  <input type="password" placeholder="Enter Password" name="password" required>
+						
+					  <input style="font-family:italic;" type="submit" value="Login">
+					  </i>
+					</div>
+
+					<div class="container" style="background-color:#f1f1f1">
+					  <button type="button" onclick="document.getElementById('signupform').style.display='block'" class="redirect">sign up
+					  </button>
+					  <span class="fpassword"> <a href="fpass.html">Forgot password?</a>
+					  </span>
+					</div>
+				</form>						
+			</div>	
+					
+		<!-- login form - end ,signup form - start-->
+						
+						
+						
+		
+								
+			<div id="signupform" class="box2s">
+				<form class="box2area openbox" action="http://localhost/sanjeev/insert.php" method="post">
+					<div class="dp">
+					  <span onclick="document.getElementById('signupform').style.display='none'" class="close" title="Close ">&times;
+					  </span>
+					  <img src="pics/food.jpg"  class="img">
+					</div>
+
+					<div class="detailsignup">
+					  <i><b>Username</b>
+					  <input type="text" placeholder="Enter Username" name="username" required pattern="[A-Za-z0-9._@ ]{5,50}" minlength="5" maxlength="50" >
+
+					  
+					  <b>mobile</b>
+					  <input type="text" placeholder="Enter 10 digit mobile number" name="mobile" required minlength="10" maxlength="10"pattern="[0-9]{10}">
+						
+					  <b>email</b>
+					  <input type="email" placeholder="Enter email" name="email" required>
+						
+					  <b>Password</b>
+					  <input type="password" placeholder="Enter Password" name="password" required minlength="6" maxlength="15">
+					  <b>confirm Password</b>
+					  <input type="password" placeholder="confirm Password" name="cpassword" required minlength="6" maxlength="15">
+						
+					  <input style="font-family:italic;" type="submit" value="signup">
+					  
+					  </i>
+					</div>
+
+					<div class="container" style="background-color:#f1f1f1">
+					  <input type="reset"  class="redirectsu"  value="reset">
+					  </input>
+					  
+					  
+					</div>
+				</form>						
+
+		
+			</div>
+				
+			
+			<div class="box">
+					
+					
+					<img id="img1" src="pics\finfood2.jpg" width="100px" height="100px" alt="cog1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<img id="img2" src="pics\oinfood.jpg" width="100px" height="100px" alt="cog1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<img id="img3" src="pics\oinfood2.jpg" width="100px" height="100px" alt="cog2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<img id="img4" src="pics\dinfood2.png" width="200px" height="100px" alt="cog2">
+					
+					<script>
+						rotating("img3",10);
+					</script>
+			</div>
+			<div class="a">
+			
+			<center>
+				
+				<i style="color:blue">SANJEEV'S RESTAURANT</i><br>
+				
+				<i style="color:#a30f2d;">Our food is prepared not only with healthy ingredients but also with LOVE.</I>
+			
+				
+				<center><BR><BR>
+				
+				&copy;
+				created by G SAI SANJEEV,
+				15311A12M3
+				</center>
+			
+			</div>
+			
+		</body>
+		
+			
+</html>

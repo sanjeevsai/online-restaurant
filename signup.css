@@ -1,0 +1,20 @@
+input[type=text],input[type=password],input[type=email]
+{
+	width:600px;
+	height:45px;
+	border-radius:100px;
+	outline:none;
+
+	font-size:25px;
+}
+input[type=submit]
+{
+	width:300px;
+	height:45px;
+	border-radius:100px;
+	outline:none;
+	padding:5px 10px;
+	font-size:35px;
+	cursor:pointer;
+	text-align:center;
+}

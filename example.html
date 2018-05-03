@@ -1,0 +1,62 @@
+						
+								<?php
+										
+									$link = mysqli_connect("localhost","root","","sanjeev"); 
+								
+									if($link === false)
+										{
+											die("ERROR: Could not connect. " . mysqli_connect_error());
+										}
+							 
+							 $data=mysqli_query($link,"select itemname,price,rating,img from menu where type='starters'");
+								echo"<form action='order.html' method='post'>";
+								echo"<table>";
+								echo"<tr>";
+							$count=1;
+								
+							while($row=mysqli_fetch_array($data))
+							{		
+									
+										//for($count=1;$count<mysqli_num_rows($data);$count++)
+								
+							//$count<mysqli_num_rows($data)
+									if($count%3!=0)
+									{
+								echo"<td>";
+
+									?>     
+							<img src=" 
+							<?php 
+							echo $row[3]; 
+							?>  " width="300" height="300"> </td><td>	
+							<?php
+
+									echo"<br>ITEM NAME:<b>" .$row[0]."</b><br>";
+									echo "ITEM PRICE: <b>RS.".$row[1]."</b><br>";
+									echo "RATING:<b>".$row[2]."</b><br>";
+									?>
+									<input type='button' value='ORDER' onclick="
+									<?php
+										mysqli_query($link,"insert into orders values('$row[0]','$row[1]',123 ,1)");
+									?>
+									
+									">
+									<?php
+									echo"</td>";
+									$count=$count+1;
+									}
+									
+									if($count%3==0)
+									{
+									echo "</tr>";
+									echo "<tr>";
+									$count=$count+1;
+									echo"</tr><tr  height='400'> <br><br>";
+									
+									}
+								
+							}	
+								$_SESSION["order"]=$row;	
+							?> 
+									</tr>
+									</table></form>
